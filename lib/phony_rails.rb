@@ -143,7 +143,7 @@ module PhonyRails
 end
 
 # check whether it is ActiveRecord or Mongoid being used
-ActiveRecord::Base.send :include, PhonyRails::Extension if defined?(ActiveRecord)
+ActiveRecord::Base.send :include, PhonyRails::Extension if defined?(ActiveRecord::Base)
 
 if defined?(Mongoid)
   module Mongoid::Phony
